@@ -43,6 +43,7 @@ p, div {
   cursor: pointer;
   transition: opacity 0.15s,
   font-weight 0.15s;
+  margin: 16px 12px;
 }
 
 button:hover {
@@ -51,10 +52,6 @@ button:hover {
 
 button:active {
   font-weight: bold;
-}
-
-.first-answer, .second-answer, .third-answer, .forth-answer {
-  margin: 16px 12px;
 }
 
 .first-answer {
@@ -117,6 +114,121 @@ button:active {
   font-weight: bolder;
   padding: 37px 24px;
   background-color: black;
+}
+
+@media (min-width: 1736px) {
+  .question {
+    font-size: 42px;
+  }
+
+  .allowed-mistakes, .score {
+    right: 10px;
+    font-size: 30px;
+    top: 80px;
+  }
+
+  .allowed-mistakes {
+    margin-left: 60px;
+    line-height: 140px;
+  }
+
+  .restart-button {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    bottom: 100px;
+    font-size: 28px;
+    right: 160px;
+  }
+
+  .restart-button-a-element {
+    padding: 47px 38px;
+  }
+
+  .first-answer, .second-answer {
+    margin-top: 80px;
+  }
+
+  .first-answer, .second-answer, .third-answer, .forth-answer {
+    font-size: 34px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .restart-button {
+    margin-left: 0;
+    margin-right: 0;
+    bottom: 100px;
+    right: 50px;
+  }
+
+  .allowed-mistakes {
+    font-size: 20px;
+    left: 1190px;
+  }
+
+  .score {
+    font-size: 20px;
+    left: 1220px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .allowed-mistakes {
+    left: 1196px;
+    top: 140px;
+  }
+
+  .score {
+    left: 1218px;
+    top: 100px;
+  }
+
+  .restart-button-a-element {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .question {
+    font-size: 24px;
+  }
+
+  .first-answer, .second-answer, .third-answer, .forth-answer {
+    min-height: 100px;
+    max-width: 280px;
+    font-size: 25px;
+  }
+
+  .allowed-mistakes {
+    left: 1132px;
+    font-size: 18px;
+  }
+
+  .score {
+    left: 1160px;
+    font-size: 18px;
+  }
+
+  .restart-button {
+    font-size: 20px;
+  }
+
+  .restart-button-a-element {
+    margin-right: 20px;
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .allowed-mistakes {
+    left: 1042px;
+ }
+
+  .score {
+    left: 1070px;
+  }
 }
 
 .result {
