@@ -19,7 +19,7 @@ const questionListSource = [{
   {question: 'What is the name of the heighest mountain in the world?',
   options: ['Mt. Kangchenjunga', 'Mt. K2', 'Mt. Lhotse', 'Mt. Everest'],
   answer: 4},
-  {question: 'What is the popular drink in the world that is not alcohol?',
+  {question: 'What is the most popular drink in the world that is not alcohol?',
   options: ['Coffee', 'Lemon juice', 'Coca Cola', 'Tea'],
   answer: 1},
   {question: 'Which animal can be seen on the Porsche logo?',
@@ -141,18 +141,32 @@ function showAnswer(question, answer) {
 
 //endGame function shows the player a page that includes the message "Thank you for playing!", the player's score and a play again button.
 function endGame() {
-  localStorage.setItem('questionIndex', JSON.stringify(questionIndex = -1));
-  document.body.innerHTML =`<p class="end-of-the-game">Thank you for playing!</p>
-    <p class="end-of-the-game">You scored: ${score} points.</p>
-    <p><button><a href="quiz.html" class="play-again-button" onclick ="
-    localStorage.setItem('questionIndex', JSON.stringify(questionIndex = 0));
-    localStorage.setItem('score', JSON.stringify(score = 0));
-    localStorage.setItem('isFirstGuess', JSON.stringify(isFirstGuess = true));
-    localStorage.setItem('allowedMistakes', JSON.stringify(allowedMistakes = 3));
-    localStorage.setItem('wrongAnswerList', JSON.stringify(wrongAnswerList = []));
-    ">Play again</a>
-    </button></p>`;
-}
+  if (score === 1) {
+      localStorage.setItem('questionIndex', JSON.stringify(questionIndex = -1));
+      document.body.innerHTML =`<p class="end-of-the-game">Thank you for playing!</p>
+        <p class="end-of-the-game">You scored: ${score} point.</p>
+        <p><button><a href="quiz.html" class="play-again-button" onclick ="
+        localStorage.setItem('questionIndex', JSON.stringify(questionIndex = 0));
+        localStorage.setItem('score', JSON.stringify(score = 0));
+        localStorage.setItem('isFirstGuess', JSON.stringify(isFirstGuess = true));
+        localStorage.setItem('allowedMistakes', JSON.stringify(allowedMistakes = 3));
+        localStorage.setItem('wrongAnswerList', JSON.stringify(wrongAnswerList = []));
+        ">Play again</a>
+        </button></p>`;
+    } else {
+      localStorage.setItem('questionIndex', JSON.stringify(questionIndex = -1));
+      document.body.innerHTML =`<p class="end-of-the-game">Thank you for playing!</p>
+        <p class="end-of-the-game">You scored: ${score} points.</p>
+        <p><button><a href="quiz.html" class="play-again-button" onclick ="
+        localStorage.setItem('questionIndex', JSON.stringify(questionIndex = 0));
+        localStorage.setItem('score', JSON.stringify(score = 0));
+        localStorage.setItem('isFirstGuess', JSON.stringify(isFirstGuess = true));
+        localStorage.setItem('allowedMistakes', JSON.stringify(allowedMistakes = 3));
+        localStorage.setItem('wrongAnswerList', JSON.stringify(wrongAnswerList = []));
+        ">Play again</a>
+        </button></p>`;
+    }
+  }
 
 //createRandomArray creates a random array from an existing array.
 function createRandomArray(array) {
