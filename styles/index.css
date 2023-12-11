@@ -29,3 +29,48 @@ button:hover {
 button:active {
   font-weight: bold;
 }
+
+@media (min-width: 1920px) {
+  .welcome-paragraph {
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+
+  .start-playing-button {
+    height: 180px;
+    width: 360px;
+    margin-left: -190px ;
+    margin-top: -20px;
+    font-size: 40px;
+    line-height: 176px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .welcome-paragraph {
+    font-size: 52px;
+  }
+
+  .start-playing-button {
+    height: 200px;
+    width: 400px;
+    margin-left: -210px ;
+    font-size: 44px;
+    line-height: 194px;
+  }
+}
+
+@media (min-height: 1600px) {
+  .welcome-paragraph {
+    font-size: 52px;
+    margin-bottom: 80px;
+  }
+
+  .start-playing-button {
+    height: 200px;
+    width: 400px;
+    margin-left: -190px ;
+    font-size: 44px;
+    line-height: 194px;
+  }
+}
